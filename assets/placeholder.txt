@@ -1,0 +1,7 @@
+Ce dossier contiendra les futurs assets du jeu :
+- Sons
+- Musiques
+- Sprites
+- Textures
+
+Pour l'instant, nous utilisons des textures générées procéduralement pour le prototype.
