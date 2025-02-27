@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soullike Maze Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="ui-overlay">
+            <div id="stamina-bar" class="status-bar">
+                <div id="stamina-fill"></div>
+            </div>
+            <div id="sanity-bar" class="status-bar">
+                <div id="sanity-fill"></div>
+            </div>
+            <div id="game-message"></div>
+        </div>
+        <div id="title-screen">
+            <h1>Maze Explorer</h1>
+            <p class="subtitle">Échappez au labyrinthe sans fin</p>
+            <button id="start-button">Commencer</button>
+        </div>
+        <div id="death-screen" class="hidden">
+            <h2>Vous avez succombé au labyrinthe</h2>
+            <p>Distance parcourue: <span id="distance-stat">0</span></p>
+            <p>Tentatives: <span id="attempts-stat">0</span></p>
+            <button id="restart-button">Recommencer</button>
+        </div>
+    </div>
+    
+    <!-- Scripts externes -->
+    <script src="https://yantra.gg/labyrinthos.min.js"></script>
+    
+    <!-- Scripts du jeu -->
+    <script src="js/utils/constants.js"></script>
+    <script src="js/utils/helpers.js"></script>
+    <script src="js/maze-generator.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
