@@ -29,11 +29,15 @@ const SOUND_CONFIG = {
 
 // Configuration du labyrinthe
 const MAZE_CONFIG = {
-    BASE_WIDTH: 100,        // Largeur de base beaucoup plus grande (était 32)
-    BASE_HEIGHT: 100,       // Hauteur de base beaucoup plus grande (était 32)
-    COMPLEXITY_MULTIPLIER: 5, // Multiplicateur de complexité augmenté (était 2)
-    EXIT_PLACEMENT_DISTANCE: 0.9, // Sortie placée encore plus loin (était 0.8)
-    ITEM_DENSITY: 0.01      // Moins d'objets pour rendre l'exploration plus difficile (était 0.02)
+    BASE_WIDTH: 250,        // Largeur de base encore plus grande (était 100)
+    BASE_HEIGHT: 250,       // Hauteur de base encore plus grande (était 100)
+    COMPLEXITY_MULTIPLIER: 10, // Complexité extrême (était 5)
+    EXIT_PLACEMENT_DISTANCE: 0.95, // Sortie placée extrêmement loin (était 0.9)
+    ITEM_DENSITY: 0.005,    // Encore moins d'objets pour augmenter la difficulté (était 0.01)
+    WALL_DENSITY: 0.6,      // Pourcentage de passages à bloquer (60% des couloirs potentiels seront murés)
+    DEAD_END_RATIO: 0.8,    // Pourcentage de culs-de-sac à conserver (80% - plus c'est élevé, plus il y a d'impasses)
+    DISCONNECTION_CHANCE: 0.7, // Probabilité qu'une zone soit intentionnellement séparée des autres
+    MIN_PATH_LENGTH: 50     // Longueur minimale du chemin entre l'entrée et la sortie
 };
 
 // Temps de fondu pour les transitions (en ms)
@@ -41,8 +45,8 @@ const FADE_DURATION = 1000;
 
 // Constantes de rendu
 const RENDER_CONFIG = {
-    LIGHT_RADIUS: 4,       // Rayon de lumière réduit (était 5)
-    AMBIENT_LIGHT: 0.05,   // Lumière ambiante réduite (était 0.1)
-    FOG_DENSITY: 0.3,      // Densité du brouillard augmentée (était 0.2)
-    VIEW_DISTANCE: 6       // Distance de vision réduite (était 8)
+    LIGHT_RADIUS: 3,       // Rayon de lumière encore plus réduit (était 4)
+    AMBIENT_LIGHT: 0.02,   // Lumière ambiante presque inexistante (était 0.05)
+    FOG_DENSITY: 0.4,      // Densité du brouillard augmentée (était 0.3)
+    VIEW_DISTANCE: 5       // Distance de vision encore plus réduite (était 6)
 };
