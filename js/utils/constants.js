@@ -29,11 +29,11 @@ const SOUND_CONFIG = {
 
 // Configuration du labyrinthe
 const MAZE_CONFIG = {
-    BASE_WIDTH: 32,
-    BASE_HEIGHT: 32,
-    COMPLEXITY_MULTIPLIER: 2, // Plus c'est élevé, plus le labyrinthe est complexe
-    EXIT_PLACEMENT_DISTANCE: 0.8, // Pourcentage de la distance maximale du point de départ (0-1)
-    ITEM_DENSITY: 0.02 // Probabilité d'apparition d'objets (0-1)
+    BASE_WIDTH: 100,        // Largeur de base beaucoup plus grande (était 32)
+    BASE_HEIGHT: 100,       // Hauteur de base beaucoup plus grande (était 32)
+    COMPLEXITY_MULTIPLIER: 5, // Multiplicateur de complexité augmenté (était 2)
+    EXIT_PLACEMENT_DISTANCE: 0.9, // Sortie placée encore plus loin (était 0.8)
+    ITEM_DENSITY: 0.01      // Moins d'objets pour rendre l'exploration plus difficile (était 0.02)
 };
 
 // Temps de fondu pour les transitions (en ms)
@@ -41,8 +41,8 @@ const FADE_DURATION = 1000;
 
 // Constantes de rendu
 const RENDER_CONFIG = {
-    LIGHT_RADIUS: 5, // Rayon de lumière en nombre de tuiles
-    AMBIENT_LIGHT: 0.1, // Niveau de lumière ambiante (0-1)
-    FOG_DENSITY: 0.2, // Densité du brouillard (0-1)
-    VIEW_DISTANCE: 8 // Distance de vision en nombre de tuiles
+    LIGHT_RADIUS: 4,       // Rayon de lumière réduit (était 5)
+    AMBIENT_LIGHT: 0.05,   // Lumière ambiante réduite (était 0.1)
+    FOG_DENSITY: 0.3,      // Densité du brouillard augmentée (était 0.2)
+    VIEW_DISTANCE: 6       // Distance de vision réduite (était 8)
 };
