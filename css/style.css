@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#ui-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    padding: 20px;
+}
+
+.status-bar {
+    height: 10px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 8px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+#stamina-fill {
+    height: 100%;
+    width: 100%;
+    background-color: #4caf50;
+    transition: width 0.2s;
+}
+
+#sanity-fill {
+    height: 100%;
+    width: 100%;
+    background-color: #9c27b0;
+    transition: width 0.2s;
+}
+
+#game-message {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    text-align: center;
+    max-width: 80%;
+}
+
+#title-screen, #death-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    transition: opacity 0.5s;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: #ddd;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #ff5555;
+    text-shadow: 0 0 8px #ff0000;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #aaa;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #555;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #444;
+    border-color: #777;
+    transform: scale(1.05);
+}
+
+/* Animation pour les effets de flickering */
+@keyframes flicker {
+    0% { opacity: 1; }
+    5% { opacity: 0.8; }
+    10% { opacity: 1; }
+    15% { opacity: 0.9; }
+    20% { opacity: 1; }
+    50% { opacity: 1; }
+    55% { opacity: 0.7; }
+    60% { opacity: 1; }
+    75% { opacity: 0.8; }
+    80% { opacity: 1; }
+    90% { opacity: 0.9; }
+    100% { opacity: 1; }
+}
+
+#game-canvas {
+    animation: flicker 8s infinite;
+}
